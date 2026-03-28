@@ -1,3 +1,9 @@
+<div style="margin-bottom: 20px;">
+    <a href="/">Home</a>
+</div>
+
+<hr>
+
 <ul>
     {% for el in service %}
     <li>
@@ -9,7 +15,7 @@
         <a href="{% url 'servis_update' el.id %}">Tahrirlash</a>
         <a href="{% url 'servis_delete' el.id%}">O'chirish</a>
     </li>
-    {% empty %}
+    <br> {% empty %}
     <li>Hali servis qo'shilmagan. <a href="{% url 'servis_add' %}">Qo'shish</a></li>
     {% endfor %}
 </ul>

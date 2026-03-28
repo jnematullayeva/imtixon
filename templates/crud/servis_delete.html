@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>O'chirish</title>
+    <title>Ochirish</title>
 </head>
 <body>
-    <h1>Servisni o'chirish</h1>
-    <p>"{{ servis.title }}" Rostan ham servisni o'chirmoqchimisiz?</p>
+    <h1>Servisni ochirish</h1>
+    <p>"{{ servis.title }}" Rostan ham servisni ochirmoqchimisiz?</p>
     
     <form method="POST">
         {% csrf_token %}
-        <button type="submit">Ha, o'chirilsin</button>
+        <button type="submit">Ha</button>
         <a href="{% url 'servis_list' %}">Bekor qilish</a>
     </form>
 </body>

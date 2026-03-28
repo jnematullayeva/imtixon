@@ -6,7 +6,7 @@ from .forms import ServicesForms
 class ServicesList(View):
     def get(self, request):
         service = Services.objects.all()
-        return render(request, 'crud/service_list.html', {'service': service})
+        return render(request, 'crud/servis_list.html', {'service': service})
 
 class CreateService(View):
     def get(self, request):
