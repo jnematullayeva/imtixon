@@ -1,0 +1,15 @@
+<ul>
+    {% for el in service %}
+    <li>
+        <p>Title: {{ el.title }}</p>
+        <p>Desc: {{ el.desc }}</p>
+        <p>Narx: ${{ el.price }}</p>
+        <p>Kategoriya: {{ el.category.name }}</p>
+        
+        <a href="{% url 'servis_update' el.id %}">Tahrirlash</a>
+        <a href="{% url 'servis_delete' el.id%}">O'chirish</a>
+    </li>
+    {% empty %}
+    <li>Hali servis qo'shilmagan. <a href="{% url 'servis_add' %}">Qo'shish</a></li>
+    {% endfor %}
+</ul>

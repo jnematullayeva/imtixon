@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>O'chirish</title>
+</head>
+<body>
+    <h1>Servisni o'chirish</h1>
+    <p>"{{ servis.title }}" Rostan ham servisni o'chirmoqchimisiz?</p>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Ha, o'chirilsin</button>
+        <a href="{% url 'servis_list' %}">Bekor qilish</a>
+    </form>
+</body>
+</html>
